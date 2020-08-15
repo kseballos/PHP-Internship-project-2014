@@ -1,0 +1,26 @@
+cancelled completed > delete after 1 month
+
+open,  
+
+approved-> enable change priority by scheduler -(dili mabalik open and approved, on going,hold and cancel), 
+
+on going, hold ,( cancel but never sa open and approved)(pwede change
+
+cancelled(unable to change whatever status - confirmation upon cancellation), 
+completed(user)
+
+
+
+hold due to cHANGE OF priority > reasons 
+
+dungagan ug instruction
+
+technical recommendation/ remarks.
+
+IT cost - optional
+
+instead of control number --> CER#/PR#
+
+username --> proj namr --> cer# --> cost --> 
+
+loiscasinto@yahoo.com

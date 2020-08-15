@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="widget-container">
+      <div class="heading">
+        <i class="icon-shield"></i>Form Validation
+      </div>
+      <div class="widget-content padded">
+        <form action="#" id="validate-form" method="get">
+          <fieldset>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstname">First Name</label><input class="form-control" id="firstname" name="firstname" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label><input class="form-control" id="username" name="username" type="text">
+                </div>
+				
+				
+				
+				
+if(!isset($_SESSION['user']))
+{
+    header("Location: ../home.php");
+}
+
+$Ddatenow = date('m/d/Y');
+mysql_query("DELETE FROM joborderdetails WHERE date_to_delete = '$Ddatenow'")
+
+
+DELETE r.id, r.remarks, r.username, r.departmentid, r.ratevalue, r.rateequivalent, r.prioritynumber FROM rating r,`requestpost` t WHERE t.date_to_delete >= '2014-10-13' AND t.date_to_delete <= '2014-10-23' AND t.prioritynumber='67' "
+
+
+DELETE e.*
+FROM rating e
+WHERE t.date_to_delete >= '2014-10-13'and t.date_to_delete <= '2014-10-23' IN (SELECT t.date_to_delete
+             FROM (SELECT t.date_to_delete
+                   FROM requestpost t) as aa;
+				   
+				   
+				   delete  FROM rating USING  rating inner join joborderdetails WHERE rating.prioritynumber=joborderdetails.prioritynumber and  DATE('$delf') BETWEEN DATE('$delf') AND DATE('$delt'

@@ -1,0 +1,9 @@
+Online JO/Service Request creation and submisssion
+ Online JO/Service Request Approval (FED Manager)
+ JO/Service Request Detail View
+JO/Service Request Summary View
+ Online Scheduling and Prioritization
+ Online User Acknowledgement (Completion)
+ Online Requester Satisfaction Rating per JO/Request
+ Requester Satisfaction Rating  Summary
+ User rights

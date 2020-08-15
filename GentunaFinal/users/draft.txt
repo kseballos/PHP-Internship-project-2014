@@ -1,0 +1,51 @@
+
+<?php
+
+	$username = "root";
+	$password = "root";
+	$hostname = "localhost";
+	$database = "gentuna";
+	$dbhandle = mysql_connect($hostname, $username, $password )  or die  ("COuld not connect to dtabase");
+	
+	$connect = mysql_select_db($database , $dbhandle);
+	
+	$sql = "SELECT * FROM joborderdetails";
+	$result = mysql_query($sql);
+	while($rows = mysql_fetch_array($result)){
+	$adate1 = $rows['datereq'];
+	
+	
+	
+}
+	
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+	$projectname = $_POST['projectname'];
+	$username = $_POST['username'];
+	$departmentid = $_POST['departmentid'];
+	$section = $_POST['section'];
+	$datereq = $_POST['datereq'];
+	$remarks = $_POST['remarks'];
+	$cost = $_POST['cost'];
+	$proj = $_POST['proj'];
+	$connum = $_POST['connum'];
+	$cerpnum = $_POST['cerpnum'];
+
+	
+	if(empty($_POST['cost']) && $cost == "" ){
+	$sql= "UPDATE joborderdetails SET projectname='$projectname', username='$username', estimatedcost='0', departmentid='$departmentid', controlnum='$controlnum', datereq='$datereq', section='$section',  cerpnum='$cerpnum', datetime=NOW(), remarks=$remarks', projectman='$proj')";
+	$result = mysql_query($sql);
+					
+	}else{ 
+	$sql1= "UPDATE joborderdetails SET projectname='$projectname', username='$username', estimatedcost='$cost', departmentid='$departmentid', controlnum='$controlnum', datereq='$datereq', section='$section',  cerpnum='$cerpnum', datetime=NOW(), remarks=$remarks', projectman='$proj')";
+	$result = mysql_query($sql);
+	}
+	
+	if($result){
+echo "<script type=\"text/javascript\">window.location.href='fed.php' </script>";
+}
+else {
+echo 'Warning: An error has occurred.';
+				}	
+	}
+?>

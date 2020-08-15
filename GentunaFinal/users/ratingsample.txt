@@ -1,0 +1,17 @@
+<script>
+ window.onload = function()
+ {
+    document.getElementsByName('mydropdown')[0].onchange = function(e)
+    {
+      document.getElementById('mylabel').innerHTML = this.value;
+    };
+ }
+</script>
+<td>
+   <select name="mydropdown" id="mydrop" onchange="">
+      <option value="none" selected="selected"></option>
+      <option value="17.50">6M</option>
+      <option value="25.00">12M</option>
+   </select>
+</td>
+<td><label id="mylabel"></label></td>

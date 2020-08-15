@@ -1,0 +1,40 @@
+DATE SOLUTIONS
+
+
+//1st
+$datetime1 = strtotime('May 3, 2012 10:38:22 GMT');
+$datetime2 = strtotime('06 Apr 2012 07:22:21 GMT');
+
+$secs = $datetime2 - $datetime1;// == <seconds between the two times>
+$days = $secs / 86400;
+
+//2nd
+$todate= strtotime('May 3, 2012 10:38:22 GMT');
+$fromdate= strtotime('06 Apr 2012 07:22:21 GMT');
+$calculate_seconds = $todate- $fromdate; // Number of seconds between the two dates
+$days = floor($calculate_seconds / (24 * 60 * 60 )); // convert to days
+echo($days);
+
+//3rd
+There is one way to use mktime n make the date in timestamp and then subtract and then use date function to show in the way u want....
+
+Other way is that format both of dates in the same format then subtract....
+
+Third way
+
+$date1=  new DateTime("May 3, 2012 10:38:22 GMT");
+$date2= new DateTime("06 Apr 2012 07:22:21 GMT");
+echo $date1->diff($date2)->("%d");
+forth way
+
+$datetime1 = strtotime('May 3, 2012 10:38:22 GMT');
+$datetime2 = strtotime('06 Apr 2012 07:22:21 GMT');
+$secs = $datetime2 - $datetime1;// == return sec in difference
+$days = $secs / 86400;
+
+//4th
+Using DateTime and DataInterval,
+
+$date1=  new DateTime("May 3, 2012 10:38:22 GMT");
+$date2= new DateTime("06 Apr 2012 07:22:21 GMT");
+echo $date1->diff($date2)->format("%d");

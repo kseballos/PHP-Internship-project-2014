@@ -1,0 +1,19 @@
+$monthnow = date('m');
+if ($monthnow == 12)
+{
+$monthtodelete = $monthnow - 11;
+$datenow = date('d/Y');
+$monthtodel = $monthtodelete . '/' .$datenow;
+}else{
+$monthtodelete = $monthnow + 1;
+$datenow = date('d/Y');
+$monthtodel = $monthtodelete . '/' .$datenow;
+}
+
+if($adate != ""){
+	$sql= "INSERT INTO requestpost (title, username, departmentid, businessunitid, unitid, tid, availdate, datetime, remarks, cost , date_to_delete) VALUES ('$title', '$user', '$depta', '$busse', '$unita', '$trouba' , '$adate', NOW() , '$rem' , '$cost' , '$monthtodel')";
+	}
+	else{
+	$sql= "INSERT INTO requestpost (title, username, departmentid, businessunitid, unitid, tid,  datetime, remarks , cost,date_to_delete) VALUES ('$title', '$user',
+	'$depta', '$busse', '$unita', '$trouba' ,  NOW() , '$rem' ,  '$cost' , '$monthtodel')";
+	}
